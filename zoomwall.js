@@ -94,12 +94,14 @@ function keys(blocks) {
 function resizeRow(row, width) {
     if (row && row.length > 1) {
         row.forEach(function (img) {
+            debugger
             img.style.width = `${(parseInt(window.getComputedStyle(img).width, 10) / width) * 100}%`;
             img.style.height = "auto";
         });
     }
 }
 function calcRowWidth(row) {
+    debugger
     return row.reduce((width, img) => width + parseInt(window.getComputedStyle(img).width, 10), 0);
 }
 function resize(blocks) {
